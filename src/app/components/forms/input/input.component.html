@@ -1,0 +1,14 @@
+<div
+  [class]="
+    'border-[#042a44] border-2 flex items-center justify-between p-2 rounded w-full ' +
+    class
+  "
+>
+  <mat-icon class="pr-4 text-[#042a44]"> {{ icon }} </mat-icon>
+  <input
+    [type]="type"
+    class="outline-transparent w-full pl-2"
+    [placeholder]="label"
+    ngmodel
+  />
+</div>

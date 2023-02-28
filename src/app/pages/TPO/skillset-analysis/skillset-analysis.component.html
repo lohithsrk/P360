@@ -1,0 +1,157 @@
+<section class="p-20">
+  <div class="flex gap-5">
+    <div>
+      <div class="flex flex-col text-center">
+        <span>{{ studentSkillsetData.length }}</span>
+        <span>No. of students</span>
+      </div>
+      <div>
+        <button
+          class="border"
+          type="button"
+          data-te-collapse-init
+          data-te-ripple-init
+          data-te-ripple-color="light"
+          data-te-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          Registration number
+        </button>
+        <div
+          class="!visible border max-h-28 overflow-y-scroll p-2 pr-0 scrollbar-hide"
+          id="collapseExample"
+          data-te-collapse-
+        >
+          <div *ngFor="let reg of regNoFilters" class="pb-1 flex items-center">
+            <input
+              type="checkbox"
+              [value]="reg"
+              [id]="reg"
+              class="mr-2"
+              (input)="handleRegFilterChange(reg)"
+            />
+            <label [for]="reg">{{ reg }}</label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button
+          class="border"
+          type="button"
+          data-te-collapse-init
+          data-te-ripple-init
+          data-te-ripple-color="light"
+          data-te-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          Test module percentage
+        </button>
+        <div
+          class="!visible border max-h-28 overflow-y-scroll p-2 pr-0 scrollbar-hide"
+          id="collapseExample"
+          data-te-collapse-
+        >
+          <div
+            *ngFor="let p of [25, 50, 75, 100]"
+            class="pb-1 flex items-center"
+          >
+            <input
+              type="checkbox"
+              [value]="p"
+              [id]="p"
+              class="mr-2"
+              (input)="handleTestPercentFilterChange(p)"
+            />
+            <label [for]="p">{{ p === 25 ? p - 25 : p - 24 }} - {{ p }}</label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button
+          class="border"
+          type="button"
+          data-te-collapse-init
+          data-te-ripple-init
+          data-te-ripple-color="light"
+          data-te-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          Grand Test module percentage
+        </button>
+        <div
+          class="!visible border max-h-28 overflow-y-scroll p-2 pr-0 scrollbar-hide"
+          id="collapseExample"
+          data-te-collapse-
+        >
+          <div
+            *ngFor="let p of [25, 50, 75, 100]"
+            class="pb-1 flex items-center"
+          >
+            <input
+              type="checkbox"
+              [value]="p"
+              [id]="p"
+              class="mr-2"
+              (input)="handleGrandTestPercentFilterChange(p)"
+            />
+            <label [for]="p">{{ p === 25 ? p - 25 : p - 24 }} - {{ p }}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table
+        class="w-full text-sm text-left text-gray-500 dark:text-gray-400 h-36"
+      >
+        <thead
+          class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 w-full"
+        >
+          <tr class="w-full grid grid-cols-7">
+            <th scope="col" class="px-6 py-3 text-center">
+              Registration Number
+            </th>
+            <th scope="col" class="px-6 py-3 text-center">Name</th>
+            <th scope="col" class="px-6 py-3 text-center">Departmant</th>
+            <th scope="col" class="px-6 py-3 text-center">Graduation Year</th>
+            <th scope="col" class="px-6 py-3 text-center">Test name module</th>
+            <th scope="col" class="px-6 py-3 text-center">Test module(%)</th>
+            <th scope="col" class="px-6 py-3 text-center">
+              Grand total range(%)
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <div
+            class="max-h-[calc(100vh-15rem)] overflow-y-scroll scrollbar-hide"
+          >
+            <div *ngFor="let data of studentSkillsetData">
+              <tr
+                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 grid grid-cols-7"
+                *ngIf="data.show"
+              >
+                <td scope="row" class="px-6 py-4 text-center">
+                  {{ data.registrationNumber }}
+                </td>
+                <td class="px-6 py-4 text-center">
+                  {{ data.name }}
+                </td>
+                <td class="px-6 py-4 text-center">{{ data.departmant }}</td>
+                <td class="px-6 py-4 text-center">{{ data.graduationYear }}</td>
+                <td class="px-6 py-4 text-center">{{ data.testNameModule }}</td>
+                <td class="px-6 py-4 text-center">
+                  {{ data.testModulePercentage }}
+                </td>
+                <td class="px-6 py-4 text-center">
+                  {{ data.grandTotalRangePercentage }}
+                </td>
+              </tr>
+            </div>
+          </div>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

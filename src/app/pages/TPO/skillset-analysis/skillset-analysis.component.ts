@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { StudentDataService } from 'src/app/services/student-data.service';
 import { StudentData } from 'src/app/interfaces/student-data';
 

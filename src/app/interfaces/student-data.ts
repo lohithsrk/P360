@@ -8,3 +8,5 @@ export interface StudentData {
   grandTotalRangePercentage: Number;
   show: Boolean;
 }
+
+

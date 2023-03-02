@@ -23,15 +23,85 @@
           id="collapseExample"
           data-te-collapse-
         >
+          <div class="pb-1 flex items-center">
+            <input
+              type="radio"
+              value="All"
+              name="regno"
+              id="All"
+              class="mr-2"
+              (input)="handleRegChange('All', 'r')"
+            />
+            <label for="All">All</label>
+          </div>
           <div *ngFor="let reg of regNoFilters" class="pb-1 flex items-center">
             <input
-              type="checkbox"
+              type="radio"
               [value]="reg"
+              name="regno"
               [id]="reg"
               class="mr-2"
-              (input)="handleRegFilterChange(reg)"
+              (input)="handleRegChange(reg, 'r')"
             />
             <label [for]="reg">{{ reg }}</label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button
+          class="border"
+          type="button"
+          data-te-collapse-init
+          data-te-ripple-init
+          data-te-ripple-color="light"
+          data-te-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          Department
+        </button>
+        <div
+          class="!visible border max-h-28 overflow-y-scroll p-2 pr-0 scrollbar-hide"
+          id="collapseExample"
+          data-te-collapse-
+        >
+          <div class="pb-1 flex items-center">
+            <input
+              type="radio"
+              value="Alld"
+              name="dept"
+              id="Alld"
+              class="mr-2"
+              (input)="handleDeptChange('All', 'd')"
+            />
+            <label for="Alld">All</label>
+          </div>
+          <div
+            *ngFor="
+              let dept of [
+                'CSE',
+                'IT',
+                'CSBS',
+                'AIDS',
+                'MECH',
+                'CIVIL',
+                'BME',
+                'AIDS',
+                'ECE',
+                'EEE'
+              ]
+            "
+            class="pb-1 flex items-center"
+          >
+            <input
+              type="radio"
+              [value]="dept"
+              name="dept"
+              [id]="dept"
+              class="mr-2"
+              (input)="handleDeptChange(dept, 'd')"
+            />
+            <label [for]="dept">{{ dept }}</label>
           </div>
         </div>
       </div>
@@ -53,16 +123,28 @@
           id="collapseExample"
           data-te-collapse-
         >
+          <div class="pb-1 flex items-center">
+            <input
+              type="radio"
+              value="All"
+              name="p"
+              id="p"
+              class="mr-2"
+              (input)="handleTestPercentFilterChange('All', 'p')"
+            />
+            <label for="p">All</label>
+          </div>
           <div
             *ngFor="let p of [25, 50, 75, 100]"
             class="pb-1 flex items-center"
           >
             <input
-              type="checkbox"
+              type="radio"
               [value]="p"
+              name="p"
               [id]="p"
               class="mr-2"
-              (input)="handleTestPercentFilterChange(p)"
+              (input)="handleTestPercentFilterChange(p, 'p')"
             />
             <label [for]="p">{{ p === 25 ? p - 25 : p - 24 }} - {{ p }}</label>
           </div>
@@ -86,18 +168,32 @@
           id="collapseExample"
           data-te-collapse-
         >
+          <div class="pb-1 flex items-center">
+            <input
+              type="radio"
+              value="All"
+              name="gp"
+              id="gp"
+              class="mr-2"
+              (input)="handleTestPercentFilterChange('All', 'gp')"
+            />
+            <label for="gp">All</label>
+          </div>
           <div
             *ngFor="let p of [25, 50, 75, 100]"
             class="pb-1 flex items-center"
           >
             <input
-              type="checkbox"
+              type="radio"
               [value]="p"
-              [id]="p"
+              [id]="p + 'g'"
+              name="gp"
               class="mr-2"
-              (input)="handleGrandTestPercentFilterChange(p)"
+              (input)="handleGrandTestPercentFilterChange(p, 'gp')"
             />
-            <label [for]="p">{{ p === 25 ? p - 25 : p - 24 }} - {{ p }}</label>
+            <label [for]="p + 'g'"
+              >{{ p === 25 ? p - 25 : p - 24 }} - {{ p }}</label
+            >
           </div>
         </div>
       </div>
@@ -127,10 +223,20 @@
           <div
             class="max-h-[calc(100vh-15rem)] overflow-y-scroll scrollbar-hide"
           >
-            <div *ngFor="let data of studentSkillsetData">
+            <div *ngFor="let data of filteredStudents">
               <tr
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 grid grid-cols-7"
-                *ngIf="data.show"
+                *ngIf="
+                  filterType === 'r'
+                    ? filteredRegNos.includes(data.registrationNumber)
+                    : filterType === 'd'
+                    ? filteredDepts.includes(data.registrationNumber)
+                    : filterType === 'p'
+                    ? filteredTestPercents.includes(data.registrationNumber)
+                    : filteredGrandTestPercents.includes(
+                        data.registrationNumber
+                      )
+                "
               >
                 <td scope="row" class="px-6 py-4 text-center">
                   {{ data.registrationNumber }}

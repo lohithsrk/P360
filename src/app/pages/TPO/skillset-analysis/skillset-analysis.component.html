@@ -1,12 +1,18 @@
-<section class="p-20">
-  <div class="flex gap-5">
-    <div>
-      <div class="flex flex-col text-center">
-        <span>{{ studentSkillsetData.length }}</span>
-        <span>No. of students</span>
+<app-navbar></app-navbar>
+<section class="">
+  <div class="flex p-8 gap-10">
+    <div class="w-[20%]">
+      <div class="flex flex-col text-">
+        <span class="text-xl">No. of students: {{ studentSkillsetData.length }}</span>
+        <span class="font-semibold text-l my-2">Filters</span>
+        <input type="text" id="simple-search"
+          class="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block pl-3 p-2.5 w-[90%]"
+          placeholder="Search"  required>
+        <!-- <span>No. of students</span> -->
+        <!-- [(ngModel)]="filterString" -->
       </div>
-      <div>
-        <button class="border" type="button" data-te-collapse-init data-te-ripple-init data-te-ripple-color="light"
+      <div class="my-2 font-semibold">
+        <button class="border font-semibold" type="button" data-te-collapse-init data-te-ripple-init data-te-ripple-color="light"
           data-te-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
           Registration number
         </button>
@@ -23,8 +29,8 @@
           </div>
         </div>
       </div>
-      <div>
-        <button class="border" type="button" data-te-collapse-init data-te-ripple-init data-te-ripple-color="light"
+      <div class="my-2">
+        <button class="border font-semibold" type="button" data-te-collapse-init data-te-ripple-init data-te-ripple-color="light"
           data-te-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
           Department
         </button>
@@ -94,15 +100,15 @@
         </div>
       </div>
     </div>
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 h-36">
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 w-full">
+    <div class="w-[80%] relative overflow-x-auto bg-[#f6f6f6] rounded-lg">
+      <table class="w-full text-sm text-left text-gray-500  h-36">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50  w-full">
           <tr class="w-full grid grid-cols-7">
             <th scope="col" class="px-6 py-3 text-center">
               Registration Number
             </th>
             <th scope="col" class="px-6 py-3 text-center">Name</th>
-            <th scope="col" class="px-6 py-3 text-center">Departmant</th>
+            <th scope="col" class="px-6 py-3 text-center">Department</th>
             <th scope="col" class="px-6 py-3 text-center">Graduation Year</th>
             <th scope="col" class="px-6 py-3 text-center">Test name module</th>
             <th scope="col" class="px-6 py-3 text-center">Test module(%)</th>
@@ -115,7 +121,7 @@
           <div class="max-h-[calc(100vh-15rem)] overflow-y-scroll scrollbar-hide">
             <div *ngFor="let data of filteredStudents">
               <tr
-                class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 grid grid-cols-7"
+                class="bg-white border-b  hover:bg-gray-50  grid grid-cols-7"
                 *ngIf="
                   filterType === 'r'
                     ? filteredRegNos.includes(data.academy.registrationNumber)

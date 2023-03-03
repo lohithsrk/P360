@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/auth/login/login.component';
-import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
+// import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
 import { IntershipComponent } from './pages/intership/intership.component';
 import { RoadmapComponent } from './pages/StudentDashboard/roadmap/roadmap.component';
 import { StudentProfileComponent } from './pages/StudentDashboard/student-profile/student-profile.component';
@@ -21,10 +21,10 @@ const routes: Routes = [
     component: RoadmapComponent,
   },
   {
-    path: 'intership',
+    path: 'internship',
     component: IntershipComponent,
   },{
-    path: '',
+    path: 'about',
     component: StudentProfileComponent ,
   }
 ];

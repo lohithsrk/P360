@@ -1,31 +1,35 @@
+<app-navbar></app-navbar>
 <div class="flex justify-center items-start min-h-screen p-8">
   <div class=" w-[20%]">
-    <h1 class="font-semibold my-2 text-start pl-3">Filter</h1>
-    <input type="text" class="border-2 border-black" placeholder="Search" [(ngModel)]="filterString">
-    <div class="p-2 flex flex-col items-start w-[90%] justify-center">
-      <label for="" class="m-1">Company</label>
+    <h1 class="font-semibold my-2 text-start pl-3 text-xl">Filters</h1>
+    <!-- <input type="text" class="border-2 border-black" placeholder="Search" "> -->
+    <input type="text" id="simple-search"
+      class="bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block pl-5 p-2.5 w-[90%]"
+      placeholder="Search" [(ngModel)]="filterString" required>
+    <div class="p-2 flex flex-col items-start w-[90%] justify-center border mt-2">
+      <label for="" class="m-1 font-semibold">Company</label>
       <div *ngFor="let reg of intershipCompanyFilters">
         <input type="checkbox" class="m-2" [value]="reg" [id]="reg" />
         <label [for]="reg">{{ reg }}</label>
       </div>
     </div>
 
-    <div class="p-2 flex flex-col items-start w-[90%] justify-center">
-      <label for="">Role</label>
+    <div class="p-2 flex flex-col items-start w-[90%] justify-center border mt-2 ">
+      <label for="" class="font-semibold">Role</label>
       <div *ngFor="let reg of internshipRoleFilters">
         <input type="checkbox" class="m-2" [value]="reg" [id]="reg" />
         <label [for]="reg">{{ reg }}</label>
       </div>
     </div>
-    <div class="p-2 flex flex-col items-start w-[90%] justify-center">
-      <label for="">Intership Type</label>
+    <div class="p-2 flex flex-col items-start w-[90%] justify-center border mt-2">
+      <label for="" class="font-semibold">Intership Type</label>
       <div *ngFor="let reg of internshipTypeFilters">
         <input type="checkbox" class="m-2" [value]="reg" [id]="reg" />
         <label [for]="reg">{{ reg }}</label>
       </div>
     </div>
-    <div class="p-2 flex flex-col items-start w-[90%] justify-center">
-      <label for="">Country</label>
+    <div class="p-2 flex flex-col items-start w-[90%] justify-center border mt-2">
+      <label for="" class="font-semibold">Country</label>
       <div *ngFor="let reg of internshipCountryFilters">
         <input type="checkbox" class="m-2" [value]="reg" [id]="reg" />
         <label [for]="reg">{{ reg }}</label>
@@ -34,8 +38,8 @@
 
   </div>
   <div class="w-[80%] relative overflow-x-auto bg-[#f6f6f6] rounded-lg">
-    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400" matSort (matSortChange)="sortData($event)">
-      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <table class="w-full text-sm text-left text-gray-500" matSort (matSortChange)="sortData($event)">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
         <tr>
           <th scope="col" class="px-6 py-3" mat-sort-header="company">Company</th>
           <th scope="col" class="px-6 py-3" mat-sort-header="role">Role</th>
@@ -45,8 +49,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" *ngFor="let reg of sortedIntershipData | filter: filterString">
-          <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" >
+        <tr class="bg-white border-b hover:bg-gray-50" *ngFor="let reg of sortedIntershipData | filter: filterString">
+          <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" >
             {{reg.companyName}}
           </td>
           <td class="px-6 py-4">{{reg.role}}</td>

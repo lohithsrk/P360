@@ -1,4 +1,4 @@
-<!-- <section class="p-20">
+<section class="p-20">
   <div class="flex gap-5">
     <div>
       <div class="flex flex-col text-center">
@@ -6,78 +6,36 @@
         <span>No. of students</span>
       </div>
       <div>
-        <button
-          class="border"
-          type="button"
-          data-te-collapse-init
-          data-te-ripple-init
-          data-te-ripple-color="light"
-          data-te-target="#collapseExample"
-          aria-expanded="false"
-          aria-controls="collapseExample"
-        >
+        <button class="border" type="button" data-te-collapse-init data-te-ripple-init data-te-ripple-color="light"
+          data-te-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
           Registration number
         </button>
-        <div
-          class="!visible border max-h-28 overflow-y-scroll p-2 pr-0 scrollbar-hide"
-          id="collapseExample"
-          data-te-collapse-
-        >
+        <div class="!visible border max-h-28 overflow-y-scroll p-2 pr-0 scrollbar-hide" id="collapseExample"
+          data-te-collapse->
           <div class="pb-1 flex items-center">
-            <input
-              type="radio"
-              value="All"
-              name="regno"
-              id="All"
-              class="mr-2"
-              (input)="handleRegChange('All', 'r')"
-            />
+            <input type="radio" value="All" name="regno" id="All" class="mr-2" (input)="handleRegChange('All', 'r')" />
             <label for="All">All</label>
           </div>
           <div *ngFor="let reg of regNoFilters" class="pb-1 flex items-center">
-            <input
-              type="radio"
-              [value]="reg"
-              name="regno"
-              [id]="reg"
-              class="mr-2"
-              (input)="handleRegChange(reg, 'r')"
-            />
+            <input type="radio" [value]="reg" name="regno" [id]="reg" class="mr-2"
+              (input)="handleRegChange(reg, 'r')" />
             <label [for]="reg">{{ reg }}</label>
           </div>
         </div>
       </div>
       <div>
-        <button
-          class="border"
-          type="button"
-          data-te-collapse-init
-          data-te-ripple-init
-          data-te-ripple-color="light"
-          data-te-target="#collapseExample"
-          aria-expanded="false"
-          aria-controls="collapseExample"
-        >
+        <button class="border" type="button" data-te-collapse-init data-te-ripple-init data-te-ripple-color="light"
+          data-te-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
           Department
         </button>
-        <div
-          class="!visible border max-h-28 overflow-y-scroll p-2 pr-0 scrollbar-hide"
-          id="collapseExample"
-          data-te-collapse-
-        >
+        <div class="!visible border max-h-28 overflow-y-scroll p-2 pr-0 scrollbar-hide" id="collapseExample"
+          data-te-collapse->
           <div class="pb-1 flex items-center">
-            <input
-              type="radio"
-              value="Alld"
-              name="dept"
-              id="Alld"
-              class="mr-2"
-              (input)="handleDeptChange('All', 'd')"
-            />
+            <input type="radio" value="Alld" name="dept" id="Alld" class="mr-2"
+              (input)="handleDeptChange('All', 'd')" />
             <label for="Alld">All</label>
           </div>
-          <div
-            *ngFor="
+          <div *ngFor="
               let dept of [
                 'CSE',
                 'IT',
@@ -90,121 +48,55 @@
                 'ECE',
                 'EEE'
               ]
-            "
-            class="pb-1 flex items-center"
-          >
-            <input
-              type="radio"
-              [value]="dept"
-              name="dept"
-              [id]="dept"
-              class="mr-2"
-              (input)="handleDeptChange(dept, 'd')"
-            />
+            " class="pb-1 flex items-center">
+            <input type="radio" [value]="dept" name="dept" [id]="dept" class="mr-2"
+              (input)="handleDeptChange(dept, 'd')" />
             <label [for]="dept">{{ dept }}</label>
           </div>
         </div>
       </div>
       <div>
-        <button
-          class="border"
-          type="button"
-          data-te-collapse-init
-          data-te-ripple-init
-          data-te-ripple-color="light"
-          data-te-target="#collapseExample"
-          aria-expanded="false"
-          aria-controls="collapseExample"
-        >
+        <button class="border" type="button" data-te-collapse-init data-te-ripple-init data-te-ripple-color="light"
+          data-te-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
           Test module percentage
         </button>
-        <div
-          class="!visible border max-h-28 overflow-y-scroll p-2 pr-0 scrollbar-hide"
-          id="collapseExample"
-          data-te-collapse-
-        >
+        <div class="!visible border max-h-28 overflow-y-scroll p-2 pr-0 scrollbar-hide" id="collapseExample"
+          data-te-collapse->
           <div class="pb-1 flex items-center">
-            <input
-              type="radio"
-              value="All"
-              name="p"
-              id="p"
-              class="mr-2"
-              (input)="handleTestPercentFilterChange('All', 'p')"
-            />
+            <input type="radio" value="All" name="p" id="p" class="mr-2"
+              (input)="handleTestPercentFilterChange('All', 'p')" />
             <label for="p">All</label>
           </div>
-          <div
-            *ngFor="let p of [25, 50, 75, 100]"
-            class="pb-1 flex items-center"
-          >
-            <input
-              type="radio"
-              [value]="p"
-              name="p"
-              [id]="p"
-              class="mr-2"
-              (input)="handleTestPercentFilterChange(p, 'p')"
-            />
+          <div *ngFor="let p of [25, 50, 75, 100]" class="pb-1 flex items-center">
+            <input type="radio" [value]="p" name="p" [id]="p" class="mr-2"
+              (input)="handleTestPercentFilterChange(p, 'p')" />
             <label [for]="p">{{ p === 25 ? p - 25 : p - 24 }} - {{ p }}</label>
           </div>
         </div>
       </div>
       <div>
-        <button
-          class="border"
-          type="button"
-          data-te-collapse-init
-          data-te-ripple-init
-          data-te-ripple-color="light"
-          data-te-target="#collapseExample"
-          aria-expanded="false"
-          aria-controls="collapseExample"
-        >
+        <button class="border" type="button" data-te-collapse-init data-te-ripple-init data-te-ripple-color="light"
+          data-te-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
           Grand Test module percentage
         </button>
-        <div
-          class="!visible border max-h-28 overflow-y-scroll p-2 pr-0 scrollbar-hide"
-          id="collapseExample"
-          data-te-collapse-
-        >
+        <div class="!visible border max-h-28 overflow-y-scroll p-2 pr-0 scrollbar-hide" id="collapseExample"
+          data-te-collapse->
           <div class="pb-1 flex items-center">
-            <input
-              type="radio"
-              value="All"
-              name="gp"
-              id="gp"
-              class="mr-2"
-              (input)="handleTestPercentFilterChange('All', 'gp')"
-            />
+            <input type="radio" value="All" name="gp" id="gp" class="mr-2"
+              (input)="handleTestPercentFilterChange('All', 'gp')" />
             <label for="gp">All</label>
           </div>
-          <div
-            *ngFor="let p of [25, 50, 75, 100]"
-            class="pb-1 flex items-center"
-          >
-            <input
-              type="radio"
-              [value]="p"
-              [id]="p + 'g'"
-              name="gp"
-              class="mr-2"
-              (input)="handleGrandTestPercentFilterChange(p, 'gp')"
-            />
-            <label [for]="p + 'g'"
-              >{{ p === 25 ? p - 25 : p - 24 }} - {{ p }}</label
-            >
+          <div *ngFor="let p of [25, 50, 75, 100]" class="pb-1 flex items-center">
+            <input type="radio" [value]="p" [id]="p + 'g'" name="gp" class="mr-2"
+              (input)="handleGrandTestPercentFilterChange(p, 'gp')" />
+            <label [for]="p + 'g'">{{ p === 25 ? p - 25 : p - 24 }} - {{ p }}</label>
           </div>
         </div>
       </div>
     </div>
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table
-        class="w-full text-sm text-left text-gray-500 dark:text-gray-400 h-36"
-      >
-        <thead
-          class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 w-full"
-        >
+      <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 h-36">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 w-full">
           <tr class="w-full grid grid-cols-7">
             <th scope="col" class="px-6 py-3 text-center">
               Registration Number
@@ -220,38 +112,35 @@
           </tr>
         </thead>
         <tbody>
-          <div
-            class="max-h-[calc(100vh-15rem)] overflow-y-scroll scrollbar-hide"
-          >
+          <div class="max-h-[calc(100vh-15rem)] overflow-y-scroll scrollbar-hide">
             <div *ngFor="let data of filteredStudents">
               <tr
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 grid grid-cols-7"
                 *ngIf="
                   filterType === 'r'
-                    ? filteredRegNos.includes(data.registrationNumber)
+                    ? filteredRegNos.includes(data.academy.registrationNumber)
                     : filterType === 'd'
-                    ? filteredDepts.includes(data.registrationNumber)
+                    ? filteredDepts.includes(data.academy.registrationNumber)
                     : filterType === 'p'
-                    ? filteredTestPercents.includes(data.registrationNumber)
+                    ? filteredTestPercents.includes(data.academy.registrationNumber)
                     : filteredGrandTestPercents.includes(
-                        data.registrationNumber
+                        data.academy.registrationNumber
                       )
-                "
-              >
+                ">
                 <td scope="row" class="px-6 py-4 text-center">
-                  {{ data.registrationNumber }}
+                  {{ data.academy.registrationNumber }}
                 </td>
                 <td class="px-6 py-4 text-center">
                   {{ data.name }}
                 </td>
                 <td class="px-6 py-4 text-center">{{ data.departmant }}</td>
-                <td class="px-6 py-4 text-center">{{ data.graduationYear }}</td>
-                <td class="px-6 py-4 text-center">{{ data.testNameModule }}</td>
+                <td class="px-6 py-4 text-center">{{ data.academy.graduationYear }}</td>
+                <td class="px-6 py-4 text-center">{{ data.academy.testNameModule }}</td>
                 <td class="px-6 py-4 text-center">
-                  {{ data.testModulePercentage }}
+                  {{ data.academy.testModulePercentage }}
                 </td>
                 <td class="px-6 py-4 text-center">
-                  {{ data.grandTotalRangePercentage }}
+                  {{ data.academy.grandTotalRangePercentage }}
                 </td>
               </tr>
             </div>
@@ -260,4 +149,4 @@
       </table>
     </div>
   </div>
-</section> -->
+</section>

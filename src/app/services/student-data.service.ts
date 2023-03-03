@@ -17,152 +17,167 @@ export class StudentDataService {
         registrationNumber: '2.0f1421E+11',
         graduationYear: '2025',
         cgpa: 9.36,
-        semester:[{
-          semester_no:1,
-          gpa:9.36,
-          subjects:[{
-            subjectCode:"1",
-            subjectName:"English",
-            LetterGrade:"O"
+        testNameModule: 'DSA',
+        testModulePercentage: 30,
+        grandTotalRangePercentage: 70,
+
+        semester: [
+          {
+            semester_no: 1,
+            gpa: 9.36,
+            subjects: [
+              {
+                subjectCode: '1',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '2',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '3',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '4',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '5',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+            ],
           },
           {
-            subjectCode:"2",
-            subjectName:"English",
-            LetterGrade:"O"
+            semester_no: 2,
+            gpa: 9.36,
+            subjects: [
+              {
+                subjectCode: '1',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '2',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '3',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '4',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '5',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+            ],
           },
           {
-            subjectCode:"3",
-            subjectName:"English",
-            LetterGrade:"O"
+            semester_no: 3,
+            gpa: 9.36,
+            subjects: [
+              {
+                subjectCode: '1',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '2',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '3',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '4',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '5',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+            ],
           },
           {
-            subjectCode:"4",
-            subjectName:"English",
-            LetterGrade:"O"
+            semester_no: 4,
+            gpa: 9.36,
+            subjects: [
+              {
+                subjectCode: '1',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '2',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '3',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '4',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '5',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+            ],
           },
           {
-            subjectCode:"5",
-            subjectName:"English",
-            LetterGrade:"O"
-          }]
-        },
-        {
-          semester_no:2,
-          gpa:9.36,
-          subjects:[{
-            subjectCode:"1",
-            subjectName:"English",
-            LetterGrade:"O"
+            semester_no: 5,
+            gpa: 9.36,
+            subjects: [
+              {
+                subjectCode: '1',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '2',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '3',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '4',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+              {
+                subjectCode: '5',
+                subjectName: 'English',
+                LetterGrade: 'O',
+              },
+            ],
           },
-          {
-            subjectCode:"2",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"3",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"4",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"5",
-            subjectName:"English",
-            LetterGrade:"O"
-          }]
-        },
-        {
-          semester_no:3,
-          gpa:9.36,
-          subjects:[{
-            subjectCode:"1",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"2",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"3",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"4",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"5",
-            subjectName:"English",
-            LetterGrade:"O"
-          }]
-        },
-        {
-          semester_no:4,
-          gpa:9.36,
-          subjects:[{
-            subjectCode:"1",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"2",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"3",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"4",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"5",
-            subjectName:"English",
-            LetterGrade:"O"
-          }]
-        },
-        {
-          semester_no:5,
-          gpa:9.36,
-          subjects:[{
-            subjectCode:"1",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"2",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"3",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"4",
-            subjectName:"English",
-            LetterGrade:"O"
-          },
-          {
-            subjectCode:"5",
-            subjectName:"English",
-            LetterGrade:"O"
-          }]
-        }
-      ]
+        ],
       },
       // testNameModule: 'Aptitude Test',
       // testModulePercentage: 33.0,

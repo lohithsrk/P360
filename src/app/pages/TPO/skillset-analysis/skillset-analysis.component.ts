@@ -23,7 +23,7 @@ export class SkillsetAnalysisComponent implements OnInit {
     this.studentSkillsetData = this.studentData.data;
     this.filteredStudents = this.studentData.data;
     this.regNoFilters = this.studentSkillsetData.map(
-      (student) => student.registrationNumber
+      (student) => student.academy.registrationNumber
     );
     this.handleRegChange('All', 'r');
     this.handleTestPercentFilterChange('All', '');
@@ -37,13 +37,13 @@ export class SkillsetAnalysisComponent implements OnInit {
     }
     if (regno === 'All') {
       this.filteredRegNos = this.studentSkillsetData.map(
-        (stu) => stu.registrationNumber
+        (stu) => stu.academy.registrationNumber
       );
     } else {
       this.filteredRegNos = [
         this.studentSkillsetData.filter(
-          (student) => student.registrationNumber === regno
-        )[0].registrationNumber,
+          (student) => student.academy.registrationNumber === regno
+        )[0].academy.registrationNumber,
       ];
     }
   }
@@ -54,7 +54,7 @@ export class SkillsetAnalysisComponent implements OnInit {
     }
     if (dept === 'All') {
       this.filteredDepts = this.studentSkillsetData.map(
-        (stu) => stu.registrationNumber
+        (stu) => stu.academy.registrationNumber
       );
     } else {
       this.filteredDepts = [
@@ -62,7 +62,7 @@ export class SkillsetAnalysisComponent implements OnInit {
           .filter((student) => {
             return student.departmant.toLowerCase() == dept.toLowerCase();
           })
-          .map((stu) => stu.registrationNumber),
+          .map((stu) => stu.academy.registrationNumber),
       ];
     }
   }
@@ -72,18 +72,18 @@ export class SkillsetAnalysisComponent implements OnInit {
     }
     if (p === 'All') {
       this.filteredTestPercents = this.studentSkillsetData.map(
-        (stu) => stu.registrationNumber
+        (stu) => stu.academy.registrationNumber
       );
     } else {
       this.filteredTestPercents = [
         ...this.studentSkillsetData
           .filter((student) => {
             return (
-              student.testModulePercentage <= p &&
-              student.testModulePercentage >= p - 25
+              student.academy.testModulePercentage <= p &&
+              student.academy.testModulePercentage >= p - 25
             );
           })
-          .map((stu) => stu.registrationNumber),
+          .map((stu) => stu.academy.registrationNumber),
       ];
     }
     // findCommon(): void {
@@ -104,8 +104,8 @@ export class SkillsetAnalysisComponent implements OnInit {
     //         console.log(filteredRegNo, filteredTestPercent);
 
     //         if (
-    //           filteredRegNo.registrationNumber ===
-    //           filteredTestPercent.registrationNumber
+    //           filteredRegNo.academy.registrationNumber ===
+    //           filteredTestPercent.academy.registrationNumber
     //         ) {
     //           filtered.push(filteredTestPercent);
     //         }
@@ -120,18 +120,18 @@ export class SkillsetAnalysisComponent implements OnInit {
     }
     if (p === 'All') {
       this.filteredGrandTestPercents = this.studentSkillsetData.map(
-        (stu) => stu.registrationNumber
+        (stu) => stu.academy.registrationNumber
       );
     } else {
       this.filteredGrandTestPercents = [
         ...this.studentSkillsetData
           .filter((student) => {
             return (
-              student.testModulePercentage <= p &&
-              student.testModulePercentage >= p - 25
+              student.academy.testModulePercentage <= p &&
+              student.academy.testModulePercentage >= p - 25
             );
           })
-          .map((stu) => stu.registrationNumber),
+          .map((stu) => stu.academy.registrationNumber),
       ];
     }
     // findCommon(): void {
@@ -152,8 +152,8 @@ export class SkillsetAnalysisComponent implements OnInit {
     //         console.log(filteredRegNo, filteredTestPercent);
 
     //         if (
-    //           filteredRegNo.registrationNumber ===
-    //           filteredTestPercent.registrationNumber
+    //           filteredRegNo.academy.registrationNumber ===
+    //           filteredTestPercent.academy.registrationNumber
     //         ) {
     //           filtered.push(filteredTestPercent);
     //         }

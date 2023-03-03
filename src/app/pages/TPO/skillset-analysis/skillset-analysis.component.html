@@ -228,30 +228,30 @@
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 grid grid-cols-7"
                 *ngIf="
                   filterType === 'r'
-                    ? filteredRegNos.includes(data.registrationNumber)
+                    ? filteredRegNos.includes(data.academy.registrationNumber)
                     : filterType === 'd'
-                    ? filteredDepts.includes(data.registrationNumber)
+                    ? filteredDepts.includes(data.academy.registrationNumber)
                     : filterType === 'p'
-                    ? filteredTestPercents.includes(data.registrationNumber)
+                    ? filteredTestPercents.includes(data.academy.registrationNumber)
                     : filteredGrandTestPercents.includes(
-                        data.registrationNumber
+                        data.academy.registrationNumber
                       )
                 "
               >
                 <td scope="row" class="px-6 py-4 text-center">
-                  {{ data.registrationNumber }}
+                  {{ data.academy.registrationNumber }}
                 </td>
                 <td class="px-6 py-4 text-center">
                   {{ data.name }}
                 </td>
                 <td class="px-6 py-4 text-center">{{ data.departmant }}</td>
-                <td class="px-6 py-4 text-center">{{ data.graduationYear }}</td>
-                <td class="px-6 py-4 text-center">{{ data.testNameModule }}</td>
+                <td class="px-6 py-4 text-center">{{ data.academy.graduationYear }}</td>
+                <td class="px-6 py-4 text-center">{{ data.academy.testNameModule }}</td>
                 <td class="px-6 py-4 text-center">
-                  {{ data.testModulePercentage }}
+                  {{ data.academy.testModulePercentage }}
                 </td>
                 <td class="px-6 py-4 text-center">
-                  {{ data.grandTotalRangePercentage }}
+                  {{ data.academy.grandTotalRangePercentage }}
                 </td>
               </tr>
             </div>

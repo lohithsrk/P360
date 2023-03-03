@@ -5,6 +5,8 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { IntershipComponent } from './pages/intership/intership.component';
 import { RoadmapComponent } from './pages/StudentDashboard/roadmap/roadmap.component';
 import { StudentProfileComponent } from './pages/StudentDashboard/student-profile/student-profile.component';
+import { CreateInternshipComponent } from './pages/TPO/internship/create-internship/create-internship.component';
+import { ViewInternshipComponent } from './pages/TPO/internship/view-internship/view-internship.component';
 // import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
 
 const routes: Routes = [
@@ -23,14 +25,23 @@ const routes: Routes = [
   {
     path: 'internship',
     component: IntershipComponent,
-  },{
+  },
+  {
     path: 'about',
-    component: StudentProfileComponent ,
-  }
+    component: StudentProfileComponent,
+  },
+  {
+    path: 'internship/create',
+    component: CreateInternshipComponent,
+  },
+  {
+    path: 'internship/view',
+    component: ViewInternshipComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

@@ -7,12 +7,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { InputComponent } from './components/forms/input/input.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
-import { IntershipComponent } from './pages/intership/intership.component';
+import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
+import { IntershipComponent } from './pages/StudentDashboard/intership/intership.component';
 import { FilterPipe } from './pipes/filter.pipe';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+// import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { MatSortModule } from '@angular/material/sort';
-
 
 // import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
 import { RoadmapComponent } from './pages/StudentDashboard/roadmap/roadmap.component';
@@ -27,14 +26,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CreateInternshipComponent } from './pages/TPO/internship/create-internship/create-internship.component';
 import { SidebarComponent } from './pages/TPO/internship/sidebar/sidebar.component';
 import { ViewInternshipComponent } from './pages/TPO/internship/view-internship/view-internship.component';
+import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     InputComponent,
-    // SkillsetAnalysisComponent,
-    IntershipComponent, 
+    SkillsetAnalysisComponent,
+    IntershipComponent,
     FilterPipe,
     RoadmapComponent,
     RoadmapNavComponent,
@@ -48,6 +48,7 @@ import { ViewInternshipComponent } from './pages/TPO/internship/view-internship/
     CreateInternshipComponent,
     SidebarComponent,
     ViewInternshipComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,8 +56,8 @@ import { ViewInternshipComponent } from './pages/TPO/internship/view-internship/
     MatIconModule,
     BrowserAnimationsModule,
     FormsModule,
-    Ng2SearchPipeModule, 
-    MatSortModule
+    // Ng2SearchPipeModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

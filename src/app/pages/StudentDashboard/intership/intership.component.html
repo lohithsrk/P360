@@ -49,7 +49,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="bg-white border-b hover:bg-gray-50" *ngFor="let reg of sortedIntershipData | filter: filterString">
+        <tr class="bg-white border-b hover:bg-gray-50" *ngFor="let reg of sortedIntershipData ">
+          <!-- | filter: filterString -->
           <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap" >
             {{reg.companyName}}
           </td>

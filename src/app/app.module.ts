@@ -23,9 +23,7 @@ import { StudentNavComponent } from './components/students/student-nav/student-n
 import { StudentDetailsComponent } from './components/students/student-details/student-details.component';
 import { AboutStudentComponent } from './pages/StudentDashboard/studentProfilePages/about-student/about-student.component';
 
-@NgModule({
-  declarations: [AppComponent, LoginComponent, InputComponent, SkillsetAnalysisComponent, ],
-  imports: [BrowserModule, AppRoutingModule, MatIconModule, BrowserAnimationsModule],
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +46,7 @@ import { AboutStudentComponent } from './pages/StudentDashboard/studentProfilePa
     MatIconModule,
     BrowserAnimationsModule,
      FormsModule,
-      Ng2SearchPipeModule, MatSortModule
+    Ng2SearchPipeModule, MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent],

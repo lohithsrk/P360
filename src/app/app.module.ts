@@ -24,6 +24,7 @@ import { AboutStudentComponent } from './pages/StudentDashboard/studentProfilePa
 import { StudentProfileDetailsComponent } from './components/students/student-profile-details/student-profile-details.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.component';
+import { ProjectsPageComponent } from './components/students/projects-page/projects-page.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.co
     StudentProfileDetailsComponent,
     NavbarComponent,
     ProjectsComponent,
+    ProjectsPageComponent,
   ],
   imports: [
     BrowserModule,

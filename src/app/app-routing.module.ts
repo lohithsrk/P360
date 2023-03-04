@@ -6,6 +6,7 @@ import { IntershipComponent } from './pages/StudentDashboard/intership/intership
 import { RoadmapComponent } from './pages/StudentDashboard/roadmap/roadmap.component';
 import { StudentProfileComponent } from './pages/StudentDashboard/student-profile/student-profile.component';
 import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.component';
+import { ProjectsPageComponent } from './components/students/projects-page/projects-page.component';
 // import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'projects',
     component: ProjectsComponent,
+  },
+  {
+    path: 'projectOne',
+    component: ProjectsPageComponent,
   },
 ];
 

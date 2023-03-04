@@ -5,6 +5,8 @@ import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillse
 import { IntershipComponent } from './pages/StudentDashboard/intership/intership.component';
 import { RoadmapComponent } from './pages/StudentDashboard/roadmap/roadmap.component';
 import { StudentProfileComponent } from './pages/StudentDashboard/student-profile/student-profile.component';
+import { CreateInternshipComponent } from './pages/TPO/internship/create-internship/create-internship.component';
+import { ViewInternshipComponent } from './pages/TPO/internship/view-internship/view-internship.component';
 import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.component';
 import { ProjectsPageComponent } from './components/students/projects-page/projects-page.component';
 // import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
@@ -31,6 +33,13 @@ const routes: Routes = [
     component: StudentProfileComponent,
   },
   {
+    path: 'internship/create',
+    component: CreateInternshipComponent,
+  },
+  {
+    path: 'internship/view',
+    component: ViewInternshipComponent,
+  }, {
     path: 'projects',
     component: ProjectsComponent,
   },
@@ -44,4 +53,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

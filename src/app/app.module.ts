@@ -23,6 +23,9 @@ import { StudentDetailsComponent } from './components/students/student-details/s
 import { AboutStudentComponent } from './pages/StudentDashboard/studentProfilePages/about-student/about-student.component';
 import { StudentProfileDetailsComponent } from './components/students/student-profile-details/student-profile-details.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CreateInternshipComponent } from './pages/TPO/internship/create-internship/create-internship.component';
+import { SidebarComponent } from './pages/TPO/internship/sidebar/sidebar.component';
+import { ViewInternshipComponent } from './pages/TPO/internship/view-internship/view-internship.component';
 import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.component';
 import { ProjectsPageComponent } from './components/students/projects-page/projects-page.component';
 
@@ -43,6 +46,9 @@ import { ProjectsPageComponent } from './components/students/projects-page/proje
     AboutStudentComponent,
     StudentProfileDetailsComponent,
     NavbarComponent,
+    CreateInternshipComponent,
+    SidebarComponent,
+    ViewInternshipComponent,
     ProjectsComponent,
     ProjectsPageComponent,
   ],

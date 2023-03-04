@@ -1,3 +1,17 @@
 <div>
-    
+    <app-navbar></app-navbar>
+    <div class="flex justify-center items-start relative">
+        <div class="grid grid-cols-3 gap-20 w-full p-16 grid-flow-row" >
+            <div class="" *ngFor="let project of data">
+                <a href="/projectOne">
+                    <div
+                    [ngStyle]="{background: 'url({{project.projectScreenshot}})', width: '200px', height: '150px'}"
+
+                    class="flex relative  hover:scale-105 duration-300 w-full h-[40vh] justify-center items-center rounded-xl">
+                        <h1 class="text-start p-2 font-bold text-3xl ">{{project.projectName}}</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

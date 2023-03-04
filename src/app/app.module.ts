@@ -27,6 +27,7 @@ import { CreateInternshipComponent } from './pages/TPO/internship/create-interns
 import { SidebarComponent } from './pages/TPO/internship/sidebar/sidebar.component';
 import { ViewInternshipComponent } from './pages/TPO/internship/view-internship/view-internship.component';
 import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.component';
+import { ProjectsPageComponent } from './components/students/projects-page/projects-page.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.co
     SidebarComponent,
     ViewInternshipComponent,
     ProjectsComponent,
+    ProjectsPageComponent,
   ],
   imports: [
     BrowserModule,

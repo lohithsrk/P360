@@ -8,6 +8,7 @@ import { StudentProfileComponent } from './pages/StudentDashboard/student-profil
 import { CreateInternshipComponent } from './pages/TPO/internship/create-internship/create-internship.component';
 import { ViewInternshipComponent } from './pages/TPO/internship/view-internship/view-internship.component';
 import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.component';
+import { ProjectsPageComponent } from './components/students/projects-page/projects-page.component';
 // import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
 
 const routes: Routes = [
@@ -41,6 +42,10 @@ const routes: Routes = [
   }, {
     path: 'projects',
     component: ProjectsComponent,
+  },
+  {
+    path: 'projectOne',
+    component: ProjectsPageComponent,
   },
 ];
 

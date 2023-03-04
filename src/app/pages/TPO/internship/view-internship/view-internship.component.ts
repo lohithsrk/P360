@@ -57,12 +57,6 @@ export class ViewInternshipComponent {
     this.company_name = item.company_name;
     this.internship_date = item.internship_date;
     this.internship_position = item.internship_position;
-    this.internship_registration_link = item.internship_registration_link
-
-
-
-    // console.log(this.editArray);
-
-
+    this.internship_registration_link = item.internship_registration_link;
   }
 }

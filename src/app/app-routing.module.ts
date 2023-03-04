@@ -11,6 +11,7 @@ import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.co
 import { CreateProjectComponent } from './pages/TPO/projects/create-project/create-project.component';
 import { ViewProjectComponent } from './pages/TPO/projects/view-project/view-project.component';
 
+import { ProjectsPageComponent } from './components/students/projects-page/projects-page.component';
 // import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
 
 const routes: Routes = [
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     path: 'project/view',
     component: ViewProjectComponent,
+  },
+  {
+    path: 'projectOne',
+    component: ProjectsPageComponent,
   },
 ];
 

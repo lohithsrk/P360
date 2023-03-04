@@ -27,6 +27,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CreateInternshipComponent } from './pages/TPO/internship/create-internship/create-internship.component';
 import { ViewInternshipComponent } from './pages/TPO/internship/view-internship/view-internship.component';
 import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.component';
+import { ProjectsPageComponent } from './components/students/projects-page/projects-page.component';
 
 import { ViewProjectComponent } from './pages/TPO/projects/view-project/view-project.component';
 import { CreateProjectComponent } from './pages/TPO/projects/create-project/create-project.component';
@@ -54,7 +55,8 @@ import { SidebarComponent } from './pages/TPO/sidebar/sidebar.component';
     ProjectsComponent,
     CreateProjectComponent,
     ViewProjectComponent,
-    SidebarComponent
+    SidebarComponent,
+    ProjectsPageComponent,
   ],
   imports: [
     BrowserModule,

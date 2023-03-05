@@ -36,7 +36,7 @@ export class ViewInternshipComponent {
       internship_date: "13/08/2002"
     },
     {
-      company_name: "abc company",
+      company_name: "abcd company",
       internship_position: "Full Stack Developer",
       internship_registration_link: "link",
       internship_date: "13/08/2002"
@@ -55,12 +55,7 @@ export class ViewInternshipComponent {
     console.log(item);
     this.company_name = item.company_name;
     this.internship_date = item.internship_date;
-    
-
-
-
-    // console.log(this.editArray);
-
-
+    this.internship_position = item.internship_position;
+    this.internship_registration_link = item.internship_registration_link;
   }
 }

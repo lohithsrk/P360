@@ -12,6 +12,7 @@ import { IntershipComponent } from './pages/StudentDashboard/intership/intership
 import { FilterPipe } from './pipes/filter.pipe';
 // import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { MatSortModule } from '@angular/material/sort';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 // import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
 import { RoadmapComponent } from './pages/StudentDashboard/roadmap/roadmap.component';
@@ -24,10 +25,13 @@ import { AboutStudentComponent } from './pages/StudentDashboard/studentProfilePa
 import { StudentProfileDetailsComponent } from './components/students/student-profile-details/student-profile-details.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CreateInternshipComponent } from './pages/TPO/internship/create-internship/create-internship.component';
-import { SidebarComponent } from './pages/TPO/internship/sidebar/sidebar.component';
 import { ViewInternshipComponent } from './pages/TPO/internship/view-internship/view-internship.component';
 import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.component';
 import { ProjectsPageComponent } from './components/students/projects-page/projects-page.component';
+
+import { ViewProjectComponent } from './pages/TPO/projects/view-project/view-project.component';
+import { CreateProjectComponent } from './pages/TPO/projects/create-project/create-project.component';
+import { SidebarComponent } from './pages/TPO/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -47,9 +51,11 @@ import { ProjectsPageComponent } from './components/students/projects-page/proje
     StudentProfileDetailsComponent,
     NavbarComponent,
     CreateInternshipComponent,
-    SidebarComponent,
     ViewInternshipComponent,
     ProjectsComponent,
+    CreateProjectComponent,
+    ViewProjectComponent,
+    SidebarComponent,
     ProjectsPageComponent,
   ],
   imports: [
@@ -58,10 +64,11 @@ import { ProjectsPageComponent } from './components/students/projects-page/proje
     MatIconModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     // Ng2SearchPipeModule,
     MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

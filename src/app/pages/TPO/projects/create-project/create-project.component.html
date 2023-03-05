@@ -1,0 +1,85 @@
+<app-sidebar></app-sidebar>
+<section class="pl-16 h-screen w-full font-sans">
+  <div class="w-full h-full flex flex-col items-center justify-center">
+    <h1
+      class="mb-4 text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-4xl lg:mb-10"
+    >
+      Create Project
+    </h1>
+    <!-- <div class="grid gap-6 mb-6 md:grid-cols-2"> -->
+    <div class="flex gap-6 mb-6 flex-col flex-wrap">
+      <div class="flex gap-6 flex-row flex-wrap">
+        <div>
+          <label
+            for="project_name"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Project Name</label
+          >
+          <input
+            type="text"
+            id="project_name"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Company Name"
+            required
+            [(ngModel)]="project_name"
+          />
+        </div>
+        <div>
+          <label
+            for="student_rollno"
+            class="block mb-2 text-sm font-medium text-gray-900"
+            >Roll Number</label
+          >
+          <input
+            type="number"
+            id="student_rollno"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Full Stack Developer"
+            required
+            [(ngModel)]="student_rollno"
+          />
+        </div>
+      </div>
+      <div>
+        <label
+          for="project_description"
+          class="block text-sm font-medium text-gray-900"
+          >Project Description</label
+        >
+        <input
+          type="text"
+          id="project_description"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Full Stack Developer"
+          required
+          [(ngModel)]="project_description"
+        />
+      </div>
+      <div>
+        <label
+          for="project_score"
+          class="block text-sm font-medium text-gray-900"
+          >Project Score</label
+        >
+        <input
+          type="number"
+          id="project_score"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Full Stack Developer"
+          required
+          [(ngModel)]="project_score"
+        />
+      </div>
+
+      <div class="flex flex-col justify-center items-center w-full">
+        <button
+          type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+          (click)="createProject()"
+        >
+          Create Project
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

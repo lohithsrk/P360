@@ -24,16 +24,19 @@
         </tr>
       </thead>
       <tbody>
+        <tr *ngIf="allData" style="text-align: center">
+          <p>No Roadmap Found</p>
+        </tr>
         <tr class="bg-white border-b" *ngFor="let item of allData[0]">
-          <th
+          <td
             scope="row"
             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
           >
-            {{ item.roadmap_topic }}
-          </th>
-          <td class="px-6 py-4">{{ item.roadmap_subtopic }}</td>
-          <td class="px-6 py-4">{{ item.roadmap_description }}</td>
-          <td class="px-6 py-4">{{ item.roadmap_youtube }}</td>
+            {{ item.topic }}
+          </td>
+          <td class="px-6 py-4">{{ item.sub_topic }}</td>
+          <td class="px-6 py-4">{{ item.description }}</td>
+          <td class="px-6 py-4">{{ item.links }}</td>
           <td class="px-6 py-4 text-right">
             <a
               class="font-medium text-blue-600 hover:underline px-5 cursor-pointer"
@@ -66,63 +69,59 @@
       <div class="flex gap-6 flex-row flex-wrap">
         <div>
           <label
-            for="roadmap_topic"
+            for="topic"
             class="block mb-2 text-sm font-medium text-gray-900"
             >Roadmap Topic</label
           >
           <input
             type="text"
-            id="roadmap_topic"
+            id="topic"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Company Name"
             required
-            [(ngModel)]="roadmap_topic"
+            [(ngModel)]="topic"
           />
         </div>
         <div>
           <label
-            for="roadmap_subtopic"
+            for="sub_topic"
             class="block mb-2 text-sm font-medium text-gray-900"
             >Sub Topic</label
           >
           <input
             type="text"
-            id="roadmap_subtopic"
+            id="sub_topic"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Full Stack Developer"
             required
-            [(ngModel)]="roadmap_subtopic"
+            [(ngModel)]="sub_topic"
           />
         </div>
       </div>
       <div>
-        <label
-          for="roadmap_description"
-          class="block text-sm font-medium text-gray-900"
+        <label for="description" class="block text-sm font-medium text-gray-900"
           >Description</label
         >
         <input
           type="text"
-          id="roadmap_description"
+          id="description"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           placeholder="Full Stack Developer"
           required
-          [(ngModel)]="roadmap_description"
+          [(ngModel)]="description"
         />
       </div>
       <div>
-        <label
-          for="roadmap_youtube"
-          class="block text-sm font-medium text-gray-900"
+        <label for="links" class="block text-sm font-medium text-gray-900"
           >Youtube Links</label
         >
         <input
           type="text"
-          id="roadmap_youtube"
+          id="links"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           placeholder="Full Stack Developer"
           required
-          [(ngModel)]="roadmap_youtube"
+          [(ngModel)]="links"
         />
       </div>
 

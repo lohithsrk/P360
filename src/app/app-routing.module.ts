@@ -12,6 +12,7 @@ import { CreateProjectComponent } from './pages/TPO/projects/create-project/crea
 import { ViewProjectComponent } from './pages/TPO/projects/view-project/view-project.component';
 
 import { ProjectsPageComponent } from './components/students/projects-page/projects-page.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 import { ViewRoadmapComponent } from './pages/TPO/roadmap/view-roadmap/view-roadmap.component';
 import { CreateRoadmapComponent } from './pages/TPO/roadmap/create-roadmap/create-roadmap.component';
 // import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
@@ -62,7 +63,11 @@ const routes: Routes = [
     component: ProjectsPageComponent,
   },
   {
-    path: 'roadmap/view',
+    path: 'calendar',
+    component: CalendarComponent,
+  },
+  {
+  path: 'roadmap/view',
     component: ViewRoadmapComponent,
   },
   {
@@ -70,9 +75,5 @@ const routes: Routes = [
     component: CreateRoadmapComponent,
   },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
+@NgModule({ imports: [RouterModule.forRoot(routes)], exports: [RouterModule] })
 export class AppRoutingModule {}

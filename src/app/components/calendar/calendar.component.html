@@ -1,1 +1,9 @@
-<p>calendar works!</p>
+<!-- <p>calendar works!</p -->
+
+<div>
+    <app-navbar></app-navbar>
+    <div class=" flex flex-col justify-center items-center p-14">
+        <full-calendar [options]="calendarOptions" style="width: 50rem;"></full-calendar>
+        <button (click)="addEvent()" class="bg-blue-500 text-black" >Add Event</button>
+    </div>
+</div>

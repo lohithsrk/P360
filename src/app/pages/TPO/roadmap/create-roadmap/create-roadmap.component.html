@@ -10,63 +10,59 @@
       <div class="flex gap-6 flex-row flex-wrap">
         <div>
           <label
-            for="roadmap_topic"
+            for="topic"
             class="block mb-2 text-sm font-medium text-gray-900"
             >Roadmap Topic</label
           >
           <input
             type="text"
-            id="roadmap_topic"
+            id="topic"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Company Name"
             required
-            [(ngModel)]="roadmap_topic"
+            [(ngModel)]="topic"
           />
         </div>
         <div>
           <label
-            for="roadmap_subtopic"
+            for="sub_topic"
             class="block mb-2 text-sm font-medium text-gray-900"
             >Sub Topic</label
           >
           <input
             type="text"
-            id="roadmap_subtopic"
+            id="sub_topic"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Full Stack Developer"
             required
-            [(ngModel)]="roadmap_subtopic"
+            [(ngModel)]="sub_topic"
           />
         </div>
       </div>
       <div>
-        <label
-          for="roadmap_description"
-          class="block text-sm font-medium text-gray-900"
+        <label for="description" class="block text-sm font-medium text-gray-900"
           >Description</label
         >
         <input
           type="text"
-          id="roadmap_description"
+          id="description"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           placeholder="Full Stack Developer"
           required
-          [(ngModel)]="roadmap_description"
+          [(ngModel)]="description"
         />
       </div>
       <div>
-        <label
-          for="roadmap_youtube"
-          class="block text-sm font-medium text-gray-900"
+        <label for="links" class="block text-sm font-medium text-gray-900"
           >Youtube Links</label
         >
         <input
           type="text"
-          id="roadmap_youtube"
+          id="links"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           placeholder="Full Stack Developer"
           required
-          [(ngModel)]="roadmap_youtube"
+          [(ngModel)]="links"
         />
       </div>
 

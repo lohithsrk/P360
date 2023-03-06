@@ -10,20 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class ViewRoadmapComponent implements OnInit {
 
   ngOnInit(): void {
-    this.http.get("http://localhost:8080/roadmaps").subscribe((res) => {
+    this.http.get("http://localhost:8080/roadmap").subscribe((res) => {
       this.allData.push(res)
       console.log(this.allData);
-
     })
   }
-
   constructor(private http: HttpClient, private router: Router) { }
 
-
-  roadmap_topic: any;
-  roadmap_subtopic: any;
-  roadmap_description: any;
-  roadmap_youtube: any;
+  topic: any;
+  sub_topic: any;
+  description: any;
+  links: any;
 
   allData: any = []
 
@@ -32,18 +29,18 @@ export class ViewRoadmapComponent implements OnInit {
   editFunction(item: any) {
     this.editButton = !this.editButton
     this.editItem = item.id;
-    this.roadmap_topic = item.roadmap_topic
-    this.roadmap_subtopic = item.roadmap_subtopic
-    this.roadmap_description = item.roadmap_description
-    this.roadmap_youtube = item.roadmap_youtube
+    this.topic = item.topic
+    this.sub_topic = item.sub_topic
+    this.description = item.description
+    this.links = item.links
   }
 
   editRoadmap() {
     this.http.put(`http://localhost:8080/roadmap/update/${this.editItem}`, {
-      roadmap_topic: this.roadmap_topic,
-      roadmap_subtopic: this.roadmap_subtopic,
-      roadmap_description: this.roadmap_description,
-      roadmap_youtube: this.roadmap_youtube,
+      topic: this.topic,
+      sub_topic: this.sub_topic,
+      description: this.description,
+      links: this.links,
     }).subscribe((res) => {
       console.log(res);
       this.editButton = !this.editButton
@@ -51,9 +48,13 @@ export class ViewRoadmapComponent implements OnInit {
   }
 
   deleteProject(id: any) {
-    this.http.delete(`http://localhost:8080/roadmap/delete/${id}`).subscribe((res) => {
+    this.http.delete(`http://localhost:8080/roadmap/${id}`).subscribe((res) => {
       console.log(res);
       this.router.navigate(["/roadmap/view"])
+    })
+    this.http.get("http://localhost:8080/roadmap").subscribe((res) => {
+      this.allData.push(res)
+      console.log(this.allData);
     })
   }
 

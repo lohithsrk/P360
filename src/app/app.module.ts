@@ -36,6 +36,7 @@ import { CreateRoadmapComponent } from './pages/TPO/roadmap/create-roadmap/creat
 import { ViewRoadmapComponent } from './pages/TPO/roadmap/view-roadmap/view-roadmap.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { SideProfileComponent } from './pages/StudentDashboard/studentProfilePages/side-profile/side-profile.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { SideProfileComponent } from './pages/StudentDashboard/studentProfilePag
     HttpClientModule,
     // Ng2SearchPipeModule,
     MatSortModule,
+    FullCalendarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

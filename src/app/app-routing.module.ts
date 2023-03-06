@@ -4,7 +4,7 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
 import { IntershipComponent } from './pages/StudentDashboard/intership/intership.component';
 import { RoadmapComponent } from './pages/StudentDashboard/roadmap/roadmap.component';
-import { StudentProfileComponent } from './pages/StudentDashboard/student-profile/student-profile.component';
+import { StudentProfileComponent } from './pages/StudentDashboard/studentProfilePages/student-profile/student-profile.component';
 import { CreateInternshipComponent } from './pages/TPO/internship/create-internship/create-internship.component';
 import { ViewInternshipComponent } from './pages/TPO/internship/view-internship/view-internship.component';
 import { ProjectsComponent } from './pages/StudentDashboard/projects/projects.component';
@@ -69,11 +69,10 @@ const routes: Routes = [
     path: 'roadmap/create',
     component: CreateRoadmapComponent,
   },
-
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

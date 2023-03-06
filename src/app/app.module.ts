@@ -18,7 +18,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RoadmapComponent } from './pages/StudentDashboard/roadmap/roadmap.component';
 import { RoadmapNavComponent } from './components/roadmap-nav/roadmap-nav.component';
 import { RoadmapRolesComponent } from './components/roadmap-roles/roadmap-roles.component';
-import { StudentProfileComponent } from './pages/StudentDashboard/student-profile/student-profile.component';
+import { StudentProfileComponent } from './pages/StudentDashboard/studentProfilePages/student-profile/student-profile.component';
 import { StudentNavComponent } from './components/students/student-nav/student-nav.component';
 import { StudentDetailsComponent } from './components/students/student-details/student-details.component';
 import { AboutStudentComponent } from './pages/StudentDashboard/studentProfilePages/about-student/about-student.component';
@@ -35,6 +35,7 @@ import { SidebarComponent } from './pages/TPO/sidebar/sidebar.component';
 import { CreateRoadmapComponent } from './pages/TPO/roadmap/create-roadmap/create-roadmap.component';
 import { ViewRoadmapComponent } from './pages/TPO/roadmap/view-roadmap/view-roadmap.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { SideProfileComponent } from './pages/StudentDashboard/studentProfilePages/side-profile/side-profile.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
     CreateRoadmapComponent,
     ViewRoadmapComponent,
     CalendarComponent,
+    SideProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,4 +79,4 @@ import { CalendarComponent } from './components/calendar/calendar.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

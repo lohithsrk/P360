@@ -11,46 +11,63 @@
       <div class="flex gap-6 flex-row flex-wrap">
         <div>
           <label
-            for="internship_name"
+            for="company_name"
             class="block mb-2 text-sm font-medium text-gray-900"
             >Internship Name</label
           >
           <input
             type="text"
-            id="internship_name"
+            id="company_name"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Company Name"
             required
-            [(ngModel)]="internship_name"
+            [(ngModel)]="company_name"
           />
         </div>
         <div>
           <label
-            for="inernship_description"
+            for="internship_position"
             class="block mb-2 text-sm font-medium text-gray-900"
-            >Internship description</label
+            >Internship Position</label
           >
           <input
             type="text"
-            id="inernship_description"
+            id="internship_position"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Full Stack Developer"
             required
-            [(ngModel)]="inernship_description"
+            [(ngModel)]="internship_position"
           />
         </div>
       </div>
       <div>
-        <label for="link" class="block text-sm font-medium text-gray-900"
+        <label
+          for="internship_registration_link"
+          class="block text-sm font-medium text-gray-900"
           >Registration Link</label
         >
         <input
           type="text"
-          id="link"
+          id="internship_registration_link"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           placeholder="Full Stack Developer"
           required
-          [(ngModel)]="link"
+          [(ngModel)]="internship_registration_link"
+        />
+      </div>
+      <div>
+        <label
+          for="internship_date"
+          class="block text-sm font-medium text-gray-900"
+          >Internship Date</label
+        >
+        <input
+          type="date"
+          id="internship_date"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Full Stack Developer"
+          required
+          [(ngModel)]="internship_date"
         />
       </div>
 
@@ -58,7 +75,6 @@
         <button
           type="button"
           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
-          (click)="submit()"
         >
           Default
         </button>

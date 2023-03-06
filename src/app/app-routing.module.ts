@@ -69,7 +69,6 @@ const routes: Routes = [
     path: 'roadmap/create',
     component: CreateRoadmapComponent,
   },
-
 ];
 
 @NgModule({

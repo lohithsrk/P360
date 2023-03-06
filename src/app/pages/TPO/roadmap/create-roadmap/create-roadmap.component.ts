@@ -9,20 +9,20 @@ import { Component } from '@angular/core';
 })
 export class CreateRoadmapComponent {
 
-  roadmap_topic: any;
-  roadmap_subtopic: any;
-  roadmap_description: any;
-  roadmap_youtube: any;
+  topic: any;
+  sub_topic: any;
+  description: any;
+  links: any;
 
   constructor(private http: HttpClient, private router: Router) { }
 
 
   createRoadmap() {
-    this.http.post(`http://localhost:8080/roadmap/create`, {
-      roadmap_topic: this.roadmap_topic,
-      roadmap_subtopic: this.roadmap_subtopic,
-      roadmap_description: this.roadmap_description,
-      roadmap_youtube: this.roadmap_youtube,
+    this.http.post(`http://localhost:8080/roadmap`, {
+      topic: this.topic,
+      sub_topic: this.sub_topic,
+      description: this.description,
+      links: this.links,
     }).subscribe((res) => {
       console.log(res);
       alert("Success")

@@ -32,6 +32,8 @@ import { ProjectsPageComponent } from './components/students/projects-page/proje
 import { ViewProjectComponent } from './pages/TPO/projects/view-project/view-project.component';
 import { CreateProjectComponent } from './pages/TPO/projects/create-project/create-project.component';
 import { SidebarComponent } from './pages/TPO/sidebar/sidebar.component';
+import { CreateRoadmapComponent } from './pages/TPO/roadmap/create-roadmap/create-roadmap.component';
+import { ViewRoadmapComponent } from './pages/TPO/roadmap/view-roadmap/view-roadmap.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 
@@ -59,6 +61,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     ViewProjectComponent,
     SidebarComponent,
     ProjectsPageComponent,
+    CreateRoadmapComponent,
+    ViewRoadmapComponent,
     CalendarComponent,
   ],
   imports: [

@@ -4,41 +4,48 @@
     <h1
       class="mb-4 text-center font-extrabold leading-none tracking-tight text-gray-900 text-4xl py-5"
     >
-      Inntership Details
+      Roadmap Details
     </h1>
     <a
       class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
-      routerLink="/internship/create"
-      >Create Inntership</a
+      routerLink="/roadmap/create"
+      >Create Roadmap</a
     >
   </div>
   <div class="relative overflow-x-auto sm:rounded-lg px-10">
     <table class="w-full text-sm text-left text-gray-500 shadow-md">
       <thead class="text-xs text-gray-700 uppercase bg-gray-50">
         <tr>
-          <th scope="col" class="px-6 py-3">Internship Name</th>
-          <th scope="col" class="px-6 py-3">Inernship description</th>
-          <th scope="col" class="px-6 py-3">Internship Link</th>
+          <th scope="col" class="px-6 py-3">Topic</th>
+          <th scope="col" class="px-6 py-3">Sub Topic</th>
+          <th scope="col" class="px-6 py-3">Description</th>
+          <th scope="col" class="px-6 py-3">Youtube Links</th>
           <th scope="col" class="px-6 py-3">Actions</th>
         </tr>
       </thead>
       <tbody>
+        <tr *ngIf="allData" style="text-align: center">
+          <p>No Roadmap Found</p>
+        </tr>
         <tr class="bg-white border-b" *ngFor="let item of allData[0]">
-          <th
+          <td
             scope="row"
             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
           >
-            {{ item.internship_name }}
-          </th>
-          <td class="px-6 py-4">{{ item.inernship_description }}</td>
-          <td class="px-6 py-4">{{ item.link }}</td>
+            {{ item.topic }}
+          </td>
+          <td class="px-6 py-4">{{ item.sub_topic }}</td>
+          <td class="px-6 py-4">{{ item.description }}</td>
+          <td class="px-6 py-4">{{ item.links }}</td>
           <td class="px-6 py-4 text-right">
             <a
               class="font-medium text-blue-600 hover:underline px-5 cursor-pointer"
               (click)="editFunction(item)"
               >Edit</a
             >
-            <a class="font-medium text-red-600 hover:underline cursor-pointer"
+            <a
+              class="font-medium text-red-600 hover:underline cursor-pointer"
+              (click)="deleteProject(item.id)"
               >Delete</a
             >
           </td>
@@ -53,9 +60,7 @@
   *ngIf="editButton"
 >
   <div class="relative w-full h-full flex flex-col items-center justify-center">
-    <div
-      class="relative flex gap-6 mb-6 flex-col flex-wrap bg-white p-10 rounded"
-    >
+    <div class="relative flex gap-6 mb-6 flex-col flex-wrap p-10 bg-white">
       <img
         class="absolute top-2 right-2 cursor-pointer"
         src="https://img.icons8.com/windows/32/null/macos-close.png"
@@ -64,46 +69,59 @@
       <div class="flex gap-6 flex-row flex-wrap">
         <div>
           <label
-            for="internship_name"
+            for="topic"
             class="block mb-2 text-sm font-medium text-gray-900"
-            >Internship Name</label
+            >Roadmap Topic</label
           >
           <input
             type="text"
-            id="internship_name"
+            id="topic"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Company Name"
             required
-            [(ngModel)]="internship_name"
+            [(ngModel)]="topic"
           />
         </div>
         <div>
           <label
-            for="inernship_description"
+            for="sub_topic"
             class="block mb-2 text-sm font-medium text-gray-900"
-            >Inernship Position</label
+            >Sub Topic</label
           >
           <input
             type="text"
-            id="inernship_description"
+            id="sub_topic"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Full Stack Developer"
             required
-            [(ngModel)]="inernship_description"
+            [(ngModel)]="sub_topic"
           />
         </div>
       </div>
       <div>
-        <label for="link" class="block text-sm font-medium text-gray-900"
-          >Registration Link</label
+        <label for="description" class="block text-sm font-medium text-gray-900"
+          >Description</label
         >
         <input
           type="text"
-          id="link"
+          id="description"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           placeholder="Full Stack Developer"
           required
-          [(ngModel)]="link"
+          [(ngModel)]="description"
+        />
+      </div>
+      <div>
+        <label for="links" class="block text-sm font-medium text-gray-900"
+          >Youtube Links</label
+        >
+        <input
+          type="text"
+          id="links"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Full Stack Developer"
+          required
+          [(ngModel)]="links"
         />
       </div>
 
@@ -111,9 +129,9 @@
         <button
           type="button"
           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
-          (click)="editSubmit()"
+          (click)="editRoadmap()"
         >
-          Edit Internship
+          Edit Roadmap
         </button>
       </div>
     </div>

@@ -13,6 +13,8 @@ import { ViewProjectComponent } from './pages/TPO/projects/view-project/view-pro
 
 import { ProjectsPageComponent } from './components/students/projects-page/projects-page.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { ViewRoadmapComponent } from './pages/TPO/roadmap/view-roadmap/view-roadmap.component';
+import { CreateRoadmapComponent } from './pages/TPO/roadmap/create-roadmap/create-roadmap.component';
 // import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
 
 const routes: Routes = [
@@ -63,11 +65,15 @@ const routes: Routes = [
   {
     path: 'calendar',
     component: CalendarComponent,
-  }
+  },
+  {
+  path: 'roadmap/view',
+    component: ViewRoadmapComponent,
+  },
+  {
+    path: 'roadmap/create',
+    component: CreateRoadmapComponent,
+  },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule { }
+@NgModule({ imports: [RouterModule.forRoot(routes)], exports: [RouterModule] })
+export class AppRoutingModule {}

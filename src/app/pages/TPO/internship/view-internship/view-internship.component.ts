@@ -1,61 +1,52 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-view-internship',
   templateUrl: './view-internship.component.html',
 })
-export class ViewInternshipComponent {
+export class ViewInternshipComponent implements OnInit {
+  ngOnInit(): void {
+    this.http.get("http://localhost:8080/internship").subscribe((res) => {
+      this.allData.push(res)
+    })
+  }
 
-  company_name: String = "";
-  internship_position: String = "";
-  internship_registration_link: String = "";
-  internship_date: String = "";
+  internship_name: any;
+  inernship_description: any;
+  link: any;
 
   editButton: Boolean = false;
 
   editArray: any = {};
 
+  allData: any = []
 
-  allData: any = [
-    {
-      company_name: "abc company",
-      internship_position: "Full Stack Developer",
-      internship_registration_link: "link",
-      internship_date: "13/08/2002"
-    },
-    {
-      company_name: "abc company",
-      internship_position: "Full Stack Developer",
-      internship_registration_link: "link",
-      internship_date: "13/08/2002"
-    },
-    {
-      company_name: "abc company",
-      internship_position: "Full Stack Developer",
-      internship_registration_link: "link",
-      internship_date: "13/08/2002"
-    },
-    {
-      company_name: "abcd company",
-      internship_position: "Full Stack Developer",
-      internship_registration_link: "link",
-      internship_date: "13/08/2002"
-    },
-    {
-      company_name: "abc company",
-      internship_position: "Full Stack Developer",
-      internship_registration_link: "link",
-      internship_date: "13/08/2002"
-    },
-  ]
+  constructor(private http: HttpClient) { }
+
+  editSubmit() {
+    this.http.put(`http://localhost:8080/internship/${this.editItem}`, {
+      internship_name: this.internship_name,
+      inernship_description: this.inernship_description,
+      link: this.link,
+    }).subscribe((res) => {
+      console.log(res);
+    })
+  }
+
+  closeButton() {
+    this.editButton = !this.editButton
+  }
+
+  editItem: any;
 
   editFunction(item: any) {
     this.editButton = !this.editButton
     this.editArray = item;
-    console.log(item);
-    this.company_name = item.company_name;
-    this.internship_date = item.internship_date;
-    this.internship_position = item.internship_position;
-    this.internship_registration_link = item.internship_registration_link;
+    this.editItem = item.id;
+    this.internship_name = item.internship_name;
+    this.inernship_description = item.inernship_description;
+    this.link = item.link;
+
   }
 }

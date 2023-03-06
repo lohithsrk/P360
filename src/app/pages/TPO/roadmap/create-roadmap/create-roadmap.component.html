@@ -4,53 +4,65 @@
     <h1
       class="mb-4 text-xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-4xl lg:mb-10"
     >
-      Create Internship
+      Create Roadmap
     </h1>
-    <!-- <div class="grid gap-6 mb-6 md:grid-cols-2"> -->
     <div class="flex gap-6 mb-6 flex-col flex-wrap">
       <div class="flex gap-6 flex-row flex-wrap">
         <div>
           <label
-            for="internship_name"
+            for="topic"
             class="block mb-2 text-sm font-medium text-gray-900"
-            >Internship Name</label
+            >Roadmap Topic</label
           >
           <input
             type="text"
-            id="internship_name"
+            id="topic"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Company Name"
             required
-            [(ngModel)]="internship_name"
+            [(ngModel)]="topic"
           />
         </div>
         <div>
           <label
-            for="inernship_description"
+            for="sub_topic"
             class="block mb-2 text-sm font-medium text-gray-900"
-            >Internship description</label
+            >Sub Topic</label
           >
           <input
             type="text"
-            id="inernship_description"
+            id="sub_topic"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Full Stack Developer"
             required
-            [(ngModel)]="inernship_description"
+            [(ngModel)]="sub_topic"
           />
         </div>
       </div>
       <div>
-        <label for="link" class="block text-sm font-medium text-gray-900"
-          >Registration Link</label
+        <label for="description" class="block text-sm font-medium text-gray-900"
+          >Description</label
         >
         <input
           type="text"
-          id="link"
+          id="description"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           placeholder="Full Stack Developer"
           required
-          [(ngModel)]="link"
+          [(ngModel)]="description"
+        />
+      </div>
+      <div>
+        <label for="links" class="block text-sm font-medium text-gray-900"
+          >Youtube Links</label
+        >
+        <input
+          type="text"
+          id="links"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+          placeholder="Full Stack Developer"
+          required
+          [(ngModel)]="links"
         />
       </div>
 
@@ -58,9 +70,9 @@
         <button
           type="button"
           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
-          (click)="submit()"
+          (click)="createRoadmap()"
         >
-          Default
+          Create Roadmap
         </button>
       </div>
     </div>

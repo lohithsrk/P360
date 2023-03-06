@@ -31,7 +31,6 @@ export class ViewProjectComponent implements OnInit {
 
   closeButton() {
     this.editButton = !this.editButton
-
   }
 
   editItem: any;
@@ -58,10 +57,6 @@ export class ViewProjectComponent implements OnInit {
     })
   }
 
-
-
-
-
   deleteProject(id: any) {
     try {
       this.http.delete(`http://localhost:8080/project/delete/${id}`).subscribe((res) => {
@@ -73,5 +68,4 @@ export class ViewProjectComponent implements OnInit {
     }
     this.router.navigate(["/project/view"])
   }
-
 }

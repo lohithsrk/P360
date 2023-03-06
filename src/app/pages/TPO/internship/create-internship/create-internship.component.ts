@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,8 +7,24 @@ import { Component } from '@angular/core';
 
 })
 export class CreateInternshipComponent {
-  company_name: String = "";
-  internship_position: String = "";
-  internship_registration_link: String = "";
-  internship_date: String = "";
+
+  internship_name: any;
+  inernship_description: any;
+  link: any;
+
+  constructor(private http: HttpClient) { }
+
+
+  submit() {
+    this.http.post(`http://localhost:8080/internship`, {
+      internship_name: this.internship_name,
+      inernship_description: this.inernship_description,
+      link: this.link,
+    }).subscribe((res) => {
+      // console.log(res);
+      alert("Internship Added successfully")
+    })
+  }
+
+
 }

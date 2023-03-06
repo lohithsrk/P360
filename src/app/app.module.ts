@@ -34,6 +34,7 @@ import { CreateProjectComponent } from './pages/TPO/projects/create-project/crea
 import { SidebarComponent } from './pages/TPO/sidebar/sidebar.component';
 import { CreateRoadmapComponent } from './pages/TPO/roadmap/create-roadmap/create-roadmap.component';
 import { ViewRoadmapComponent } from './pages/TPO/roadmap/view-roadmap/view-roadmap.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { ViewRoadmapComponent } from './pages/TPO/roadmap/view-roadmap/view-road
     ProjectsPageComponent,
     CreateRoadmapComponent,
     ViewRoadmapComponent,
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,

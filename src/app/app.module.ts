@@ -32,6 +32,7 @@ import { ProjectsPageComponent } from './components/students/projects-page/proje
 import { ViewProjectComponent } from './pages/TPO/projects/view-project/view-project.component';
 import { CreateProjectComponent } from './pages/TPO/projects/create-project/create-project.component';
 import { SidebarComponent } from './pages/TPO/sidebar/sidebar.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { SidebarComponent } from './pages/TPO/sidebar/sidebar.component';
     ViewProjectComponent,
     SidebarComponent,
     ProjectsPageComponent,
+    CalendarComponent,
   ],
   imports: [
     BrowserModule,

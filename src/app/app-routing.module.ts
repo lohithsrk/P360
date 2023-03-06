@@ -12,6 +12,7 @@ import { CreateProjectComponent } from './pages/TPO/projects/create-project/crea
 import { ViewProjectComponent } from './pages/TPO/projects/view-project/view-project.component';
 
 import { ProjectsPageComponent } from './components/students/projects-page/projects-page.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 // import { SkillsetAnalysisComponent } from './pages/TPO/skillset-analysis/skillset-analysis.component';
 
 const routes: Routes = [
@@ -59,6 +60,10 @@ const routes: Routes = [
     path: 'projectOne',
     component: ProjectsPageComponent,
   },
+  {
+    path: 'calendar',
+    component: CalendarComponent,
+  }
 ];
 
 @NgModule({

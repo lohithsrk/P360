@@ -33,6 +33,7 @@ import { ViewProjectComponent } from './pages/TPO/projects/view-project/view-pro
 import { CreateProjectComponent } from './pages/TPO/projects/create-project/create-project.component';
 import { SidebarComponent } from './pages/TPO/sidebar/sidebar.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
   declarations: [
@@ -69,8 +70,9 @@ import { CalendarComponent } from './components/calendar/calendar.component';
     HttpClientModule,
     // Ng2SearchPipeModule,
     MatSortModule,
+    FullCalendarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
